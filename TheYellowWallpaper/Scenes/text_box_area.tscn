@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5bk4ff24jdlm"]
+
+[ext_resource type="StyleBox" uid="uid://ty2dbm12ifal" path="res://Scenes/text_box_style.tres" id="1_p8q4h"]
+[ext_resource type="Script" path="res://Scenes/text_box_area.gd" id="1_uuqvi"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_uuqvi")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control"]
+self_modulate = Color(0.345098, 0.345098, 0.345098, 0.521569)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.75
+anchor_right = 0.95
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = ExtResource("1_p8q4h")
+
+[node name="CurrentText" type="Label" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02
+anchor_top = 0.05
+anchor_right = 0.98
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2

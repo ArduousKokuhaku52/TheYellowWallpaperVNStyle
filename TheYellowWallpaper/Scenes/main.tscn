@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://1iun6u07610j"]
+
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1_dhp1u"]
+[ext_resource type="PackedScene" uid="uid://b5bk4ff24jdlm" path="res://Scenes/text_box_area.tscn" id="2_savp2"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_dhp1u")
+
+[node name="Background" type="Node2D" parent="."]
+position = Vector2(640, 360)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("2_savp2")]
+
+[connection signal="change_bg" from="CanvasLayer" to="." method="_on_canvas_layer_change_bg"]
